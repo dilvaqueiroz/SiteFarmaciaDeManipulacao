@@ -1,0 +1,229 @@
+﻿@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+CSS Reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*fim do reset*/
+
+
+/* formatacao para ajustar o flutuamento dos elementos saiba mais em: 
+http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* saiba mais em: http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,.clearfix:after{
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.clearfix:after{
+  clear: both;
+}
+.clearfix{
+  zoom: 1; /*regra é especifica para IE6 + IE7.*/
+}
+
+/*formatacao do texto*/
+p{
+font-size:14px;
+line-height:19px;
+color:#000;
+margin-bottom:10px;
+}
+h1{font-size:30px;}
+h2{font-size:27px;}
+h3{font-size:24px;}
+h4{font-size:21px;}
+h5{font-size:18px;}
+h6{font-size:15px;}
+h1,h2,h3,h4,h5,h6{
+margin-bottom:15px;
+font-weight:bold;
+font-family:"Trebuchet MS", Arial, Helvetica, Sans-serif;
+}
+/*fim da formatação do texto*/
+
+/*estrutura principal*/
+head{
+font-family:Arial,Helvetica, sans-serif;
+
+}
+body{
+min-width:960px;
+background-size:cover;
+backgroun-attachment: fixed;
+
+}
+div#top,div#content,footer{
+margin-left:auto;
+margin-right:auto;
+width:800px; /*largura da página*/
+}
+.grid{
+	display: inline;
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	/*essa class gera grid flexível do boxmodel com uma margem de 10px na direita e esquerda*/
+}
+
+
+/*formatacao da div top*/
+div#bgTop{
+	height:150px;
+	background-color:rgba(0,255,255,255.90) /*cor do topo(cabeçalho)*/
+}
+div#top h1{
+width:460px;
+background-image:url(../imagens/farmacia.jpg);
+background-repeat:no-repeat;
+width:300px;
+height:60px;
+text-indent:-9999em;
+margin-top:.2em;
+}
+
+/*formatacao do menu*/
+div#top nav{
+	width: 1000px:
+}
+ul#menu li{
+	float:right
+	margin-left:10px;
+}
+ul#menu li a{
+	dilplay:block;
+	text-decoration:none;
+	margin-top:6em;
+	color:#483129;
+	font-weight:bold;
+	font-size:1.5em;
+	padding:6px;
+}
+ul#menu li a:hover{
+	background-color:#fabb04;
+	color:#fff;
+	border-radius:6px;
+	box-shadow:2px 2px 4px #999;
+/*aplicando uma transição, para que seja possível a aplicação da regra em todos navegadores, precisamos utilizar o prefixo proprietário.*/
+transition: background-color 0.3s linear;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+	/*O Internet Explorer não suporta esta propriedade.*/
+}
+
+/*formatação da div content*/
+div#content{
+background-color:rgba(255,255,255,0.75);
+margin-top:2em;
+margin-top:2em;
+margin-bottom:2em;
+padding:1em;
+border-radius:20px 0 20px 0;
+margin-top:2em;
+/*bloco css multicolunar*/
+column-width:600px;
+	-webkit-column-width:500px;
+	-moz-column-width:500px;
+	-o-column-width:500px;
+}
+div#content h3{
+	text-shadow:0 1px 0 #fff, 0 -1px 0 #000; /*multisombra*/
+	color:#aaa;
+	letter-spacing:2px;	font-size:1.4em
+}
+.img{
+marging-bottom:5px;
+border:5px solid #d2caad;
+padding:5px;
+background-color:#FFFFFF
+}
+.img:hover{
+	background-color: #d2caad;
+	border-color:#483129;
+	/*novamente aplicando transição*/
+	transition:background, border-color 0.3slinear;
+	-webkit-transition: background,border-color 0.3s linear;
+	-moz-transition: background,border-color 0.3s linear;
+-o-transition: backgroun,border-color 0.3s linear;
+}
+.botao{
+	background-color:#483129;
+	padding:4px;
+	text-decoration: none;
+	color: #fabb05;
+	font-size: .8em;
+	font-weght: bold;
+}
+.botao:hover{
+	background-color:#fabb05;
+	color:#483129;
+	transition: background, color 0.3s linear;
+	-webkit-transition: background, color 0.3s linear;
+	-moz-transition: background,color 0.3s linear;
+	-o-transition: background, color 0.3s linear;
+}
+
+
+	
