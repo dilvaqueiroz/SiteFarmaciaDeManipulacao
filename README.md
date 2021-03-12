@@ -18,4 +18,4 @@ $ git clone https://github.com/DilvaQueiroz/SiteFarmaciaDeManipulacao.git && cd 
 ```
 
 ### 💻 Projeto
-Este é um projeto desenvolvido durante o curso técnico de Informática da ETE no ano de 2014.
+Este é um projeto desenvolvido durante o curso técnico de Informática da ETE no ano de 2012.
